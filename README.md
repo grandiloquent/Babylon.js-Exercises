@@ -45,11 +45,37 @@
 [![](Screenshots/2023-08-07_113136.jpg)](https://www.babylonjs-playground.com/#LX6M6F#11)
 [![](Screenshots/2023-08-07_113233.jpg)](https://playground.babylonjs.com/#PM5MFS#14)
 [![](Screenshots/2023-08-07_113349.jpg)](https://www.babylonjs-playground.com/#1F17BQ#56)
-
+[![](Screenshots/2023-08-07_130719.jpg)](https://playground.babylonjs.com/#KEKCLV)
+[![](Screenshots/2023-08-07_131016.jpg)](https://www.babylonjs-playground.com/#MU17PR#73)
+[![](Screenshots/2023-08-07_130956.jpg)](https://www.babylonjs-playground.com/#0K8EYN#51)
+[![](Screenshots/2023-08-07_131048.jpg)](https://www.babylonjs-playground.com/#QLVNIH#3)
+[![](Screenshots/2023-08-07_131115.jpg)](https://playground.babylonjs.com/#J5U794#11)
+[![](Screenshots/2023-08-07_131329.jpg)](https://jerome.bousquie.fr/BJS/demos/rollercoaster.html)
+[![](Screenshots/2023-08-07_131446.jpg)](https://playground.babylonjs.com/#58I88I#186)
+[![](Screenshots/2023-08-07_131523.jpg)](https://playground.babylonjs.com/#947JF6#0)
+[![](Screenshots/2023-08-07_131543.jpg)](https://playground.babylonjs.com/#8T3YBR#2)
+[![](Screenshots/2023-08-07_131614.jpg)](https://playground.babylonjs.com/#73TUXW#0)
+[![](Screenshots/2023-08-07_131638.jpg)](https://playground.babylonjs.com/#LYCSQ#256)
+[![](Screenshots/2023-08-07_131735.jpg)](https://playground.babylonjs.com/#PPM311#99)
+[![](Screenshots/2023-08-07_131821.jpg)](https://playground.babylonjs.com/#CHF3KW#108)
+[![](Screenshots/2023-08-07_131842.jpg)](https://playground.babylonjs.com/#B922X8#19)
+[![](Screenshots/2023-08-07_131921.jpg)](https://playground.babylonjs.com/#PKQ6JV#3)
+[![](Screenshots/2023-08-07_132009.jpg)](https://playground.babylonjs.com/#WBEEFF#1)
+[![](Screenshots/2023-08-07_132045.jpg)](https://playground.babylonjs.com/#7ILX7T)
+[![](Screenshots/2023-08-07_132105.jpg)](https://playground.babylonjs.com/#ZD364L#17)
+[![](Screenshots/2023-08-07_132134.jpg)](https://playground.babylonjs.com/#9M1I08#7)
+[![](Screenshots/2023-08-07_132204.jpg)](https://playground.babylonjs.com/#1JDJ9F#9)
+[![](Screenshots/2023-08-07_132238.jpg)](https://playground.babylonjs.com/#C6V6UY#49)
+[![](Screenshots/2023-08-07_132304.jpg)](https://playground.babylonjs.com/#5W4GH1#10)
+[![](Screenshots/2023-08-07_132333.jpg)](https://playground.babylonjs.com/#LPTLZM)
+[![](Screenshots/2023-08-07_132402.jpg)](https://playground.babylonjs.com/#Z07JE1#2)
+[![](Screenshots/2023-08-07_132435.jpg)](https://playground.babylonjs.com/#SQFG0Q#5)
+[![](Screenshots/2023-08-07_132518.jpg)](https://playground.babylonjs.com/#SQFG0Q#6)
 
 ## 资源
 
 - https://forum.babylonjs.com/t/examples-from-the-playground/3175
+- https://github.com/Symbitic/awesome-babylonjs#demos
 - [Babylon.js Node Material Editor](https://nme.babylonjs.com/#XDUFVU#8)
 - https://fastly.jsdelivr.net/gh/NasimiAsl/Extensions@master/ShaderBuilder/Babylonx.ShaderBuilder.js
 - https://fastly.jsdelivr.net/gh/NasimiAsl/Extensions@master/GeometryBuilder/SGBD.js
