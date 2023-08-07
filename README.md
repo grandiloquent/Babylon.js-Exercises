@@ -71,13 +71,29 @@
 [![](Screenshots/2023-08-07_132402.jpg)](https://playground.babylonjs.com/#Z07JE1#2)
 [![](Screenshots/2023-08-07_132435.jpg)](https://playground.babylonjs.com/#SQFG0Q#5)
 [![](Screenshots/2023-08-07_132518.jpg)](https://playground.babylonjs.com/#SQFG0Q#6)
+[![](Screenshots/2023-08-07_222450.jpg)](https://playground.babylonjs.com/#7EPIGY#10)
+[![](Screenshots/2023-08-07_222622.jpg)](https://playground.babylonjs.com/#J5U794#11)
+[![](Screenshots/2023-08-07_223229.jpg)](https://playground.babylonjs.com/#0NK438#34)
+[![](Screenshots/2023-08-07_223327.jpg)](https://playground.babylonjs.com/#FIKUCY#8)
+[![](Screenshots/2023-08-07_223355.jpg)](https://www.babylonjs-playground.com/#ZIYEUM)
+[![](Screenshots/2023-08-07_223418.jpg)](https://www.babylonjs-playground.com/#866PVL#2)
+[![](Screenshots/2023-08-07_223452.jpg)](https://playground.babylonjs.com/#1Z71FW#145)
+[![](Screenshots/2023-08-07_223528.jpg)](https://playground.babylonjs.com/#0IIB3N#81)
+[![](Screenshots/2023-08-07_223627.jpg)](https://lo-th.github.io/phy/index.html?E=w_havok#keva)
+[![](Screenshots/2023-08-07_223721.jpg)](https://playground.babylonjs.com/#0XUR8S#12)
+[![](Screenshots/2023-08-07_223804.jpg)](https://playground.babylonjs.com/#K488R3#46)
+[![](Screenshots/2023-08-07_223917.jpg)](https://playground.babylonjs.com/#Z6YF3L#2)
+[![](Screenshots/2023-08-07_224003.jpg)](https://playground.babylonjs.com/#K488R3#38)
+[![](Screenshots/2023-08-07_224104.jpg)](https://playground.babylonjs.com/#JB1TB3#1)
+[![](Screenshots/2023-08-07_224124.jpg)](https://playground.babylonjs.com/#1Q2E1P#32)
 
 ## 资源
 
 - https://forum.babylonjs.com/t/examples-from-the-playground/3175
 - https://github.com/Symbitic/awesome-babylonjs#demos
-- [Babylon.js Node Material Editor](https://nme.babylonjs.com/#XDUFVU#8)
+- [Babylon.js Node Material Editor](https://nme.babylonjs.com/#XDUFVU#8
+- [Search playgrounds](https://doc.babylonjs.com/playground)
 - https://fastly.jsdelivr.net/gh/NasimiAsl/Extensions@master/ShaderBuilder/Babylonx.ShaderBuilder.js
 - https://fastly.jsdelivr.net/gh/NasimiAsl/Extensions@master/GeometryBuilder/SGBD.js
-
+- https://forum.babylonjs.com/t/examples-from-the-playground/3175/1220
 
