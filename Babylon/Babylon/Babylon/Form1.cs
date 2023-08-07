@@ -113,6 +113,10 @@ namespace Babylon
             foreach (var element in extensions)
             {
                 var f = Path.Combine(w, "index." + element);
+                if (element == "js")
+                {
+                    fileName = f;
+                }
                 if (!File.Exists(f))
                     File.Copy(Path.Combine(dir, "index." + element), f);
             }
