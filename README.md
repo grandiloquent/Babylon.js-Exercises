@@ -14,6 +14,12 @@
 <img src="Screenshots/2023-08-07_105730.jpg">
 </a>
 
+<a href="https://playground.babylonjs.com/#MXV7VQ#2">
+<img src="Screenshots/2023-08-07_110310.jpg">
+</a>
+
+
+[![](Screenshots/2023-08-07_110439.jpg)](https://www.babylonjs-playground.com/#ACPMQL#2)
 
 ## 资源
 
