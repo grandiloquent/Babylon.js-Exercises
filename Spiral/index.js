@@ -1,6 +1,5 @@
 var createScene = function() {
   var scene = new BABYLON.Scene(engine);
-  var light = new BABYLON.HemisphericLight("HemiLight", new BABYLON.Vector3(0, 1, 0), scene);
 
   var camera = new BABYLON.ArcRotateCamera("Camera", 0, 0, 100, new BABYLON.Vector3(0, 0, 0), scene);
   camera.setPosition(new BABYLON.Vector3(20, 100, 100));
@@ -8,23 +7,16 @@ var createScene = function() {
   camera.lowerRadiusLimit = 50;
   camera.attachControl(canvas, true);
 
-  var camera1 = new BABYLON.ArcRotateCamera("camera1", 3 * Math.PI / 8, 3 * Math.PI / 8, 15, new BABYLON.Vector3(0, 2, 0), scene);
-  camera1.attachControl(canvas, true);
-  scene.getCameraByID("camera1").alpha = 1.4233160050013756;
-  scene.getCameraByID("camera1").beta = 1.77290545417584;
-  scene.activeCameras.push(camera1);
-  scene.activeCameras.push(camera);
-
-  camera.viewport = new BABYLON.Viewport(0.5, 0, 0.5, 1.0);
-  camera1.viewport = new BABYLON.Viewport(0, 0, 0.5, 1.0);
   scene.clearColor = new BABYLON.Color3(0, 0, 0);
-  var sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {diameter: 1,segments: 32}, scene);
+  var sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {
+    diameter: 1,
+    segments: 32
+  }, scene);
   var materialBox = new BABYLON.StandardMaterial("texture1", scene);
   materialBox.diffuseColor = new BABYLON.Color3(0, 1, 0);
-  var materialBox2 = new BABYLON.StandardMaterial("texture2", scene);
 
   sphere.material = materialBox;
-  var sphereClone = sphere.clone();
+
   var points = [];
   var radius = 0.5;
   var angle = 0;
@@ -33,15 +25,9 @@ var createScene = function() {
     radius += 0.3;
     angle += 0.1;
   }
-  var path3d = new BABYLON.Path3D(points);
-  var normals = path3d.getNormals();
 
-  var whirlpool = BABYLON.Mesh.CreateLines("whirlpool", points, scene, true);
-  whirlpool.color = new BABYLON.Color3(0.4, 0, 0);
 
-  var positionData = whirlpool.getVerticesData(BABYLON.VertexBuffer.PositionKind);
-  var heightRange = 10;
-  var alpha = 0;
+
 
   createDustDevil = function() {
     var fountain = BABYLON.Mesh.CreateBox("foutain", 1.0, scene);
@@ -75,7 +61,7 @@ var createScene = function() {
     particleSystem.start();
 
     var keys = [];
-    var animation = new BABYLON.Animation("animation","rotation.y", 30, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
+    var animation = new BABYLON.Animation("animation", "rotation.y", 30, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
 
     keys.push({
       frame: 0,
@@ -91,11 +77,9 @@ var createScene = function() {
     });
     animation.setKeys(keys);
     fountain.animations.push(animation);
-    
-    var alpha = 0,beta = 0;
+
     scene.registerAfterRender(function() {
-      alpha += 0.08;
-      beta += 0.04;
+
       fountain.position = sphere.position;
     })
   }
@@ -106,8 +90,10 @@ var createScene = function() {
   scene.registerBeforeRender(function() {
     sphere.position.x = points[i].x;
     sphere.position.z = points[i].z;
-    i=(i-1)
-    if(i<1){i=199};
+    i = (i - 1)
+    if (i < 1) {
+      i = 199
+    };
   });
 
   return scene;
