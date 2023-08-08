@@ -23,6 +23,7 @@ namespace Babylon
 
         private CallbackObjectForJs _callBackObjectForJs;
         string fileName;
+        private bool isLoadFile = false;
 
         public Form1()
         {
@@ -59,29 +60,33 @@ namespace Babylon
             {
                 if (args.IsLoading == false)
                 {
-                    var files = Clipboard.GetFileDropList();
-                    if (files.Count > 0 && File.Exists(files[0]))
+                    if (isLoadFile)
                     {
-                        fileName = files[0];
-                    }
-                    else
-                    {
-                        var s = Clipboard.GetText();
-                        if (File.Exists(s))
+                        var files = Clipboard.GetFileDropList();
+                        if (files.Count > 0 && File.Exists(files[0]))
                         {
-                            fileName = s;
+                            fileName = files[0];
                         }
                         else
                         {
-                            GenerateBabylonPlayGround(s);
+                            var s = Clipboard.GetText();
+                            if (File.Exists(s))
+                            {
+                                fileName = s;
+                            }
+                            else
+                            {
+                                GenerateBabylonPlayGround(s);
+                            }
                         }
-                    }
 
-                    _callBackObjectForJs.FileName = fileName;
-                    // File.ReadAllText(fileName)
-                    if (File.Exists(fileName))
-                        browser.EvaluateScriptAsync(
-                            $"editor.getModel().setValue('{File.ReadAllText(fileName).Replace("\n", "\\n").Replace("\r", "").Replace("'", "\\'")}')");
+                        _callBackObjectForJs.FileName = fileName;
+                        _callBackObjectForJs.isLoadFile = isLoadFile;
+                        // File.ReadAllText(fileName)
+                        if (File.Exists(fileName))
+                            browser.EvaluateScriptAsync(
+                                $"editor.getModel().setValue('{File.ReadAllText(fileName).Replace("\n", "\\n").Replace("\r", "").Replace("'", "\\'")}')");
+                    }
                 }
             });
             /*browser.KeyUp += (async (sender, args) =>
@@ -100,6 +105,7 @@ namespace Babylon
                 }
             });*/
         }
+
         public void GenerateBabylonPlayGround(String s)
         {
             var dir = "Babylon".GetEntryPath();
@@ -117,6 +123,7 @@ namespace Babylon
                 {
                     fileName = f;
                 }
+
                 if (!File.Exists(f))
                     File.Copy(Path.Combine(dir, "index." + element), f);
             }
@@ -126,15 +133,15 @@ namespace Babylon
         }
     }
 
-    
 
     public class CallbackObjectForJs
     {
         public string FileName;
+        public bool isLoadFile;
 
         public void showMessage(string msg)
         {
-            if (File.Exists(FileName))
+            if (isLoadFile && File.Exists(FileName))
                 File.WriteAllText(FileName, msg);
         }
     }
