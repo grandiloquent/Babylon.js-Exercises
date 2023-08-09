@@ -1,5 +1,4 @@
-var createScene = function() {
-
+var createScene = function () {
   var scene = new BABYLON.Scene(engine);
 
   var camera = new BABYLON.ArcRotateCamera("Camera", 0.9, 1.96, 150, BABYLON.Vector3.Zero(), scene);
@@ -80,12 +79,12 @@ var createScene = function() {
   emitter.mesh.scaling = new BABYLON.Vector3(200, 200, 200);
 
   var music = new BABYLON.Sound("Music", "ultra_violet.mp3", scene,
-    function() {
+    function () {
       music.play();
 
     }, {
-      streaming: true
-    });
+    streaming: true
+  });
 
   var analyzer = new BABYLON.Analyser(scene);
   BABYLON.Engine.audioEngine.connectToAnalyser(analyzer);
@@ -94,7 +93,7 @@ var createScene = function() {
 
   var time = 0;
   var workingArray;
-  scene.registerBeforeRender(function() {
+  scene.registerBeforeRender(function () {
 
     workingArray = analyzer.getByteFrequencyData();
 
@@ -124,8 +123,8 @@ var createScene = function() {
 }
 var canvas = document.getElementById("renderCanvas");
 
-var startRenderLoop = function(engine, canvas) {
-  engine.runRenderLoop(function() {
+var startRenderLoop = function (engine, canvas) {
+  engine.runRenderLoop(function () {
     if (sceneToRender && sceneToRender.activeCamera) {
       sceneToRender.render();
     }
@@ -135,7 +134,7 @@ var startRenderLoop = function(engine, canvas) {
 var engine = null;
 var scene = null;
 var sceneToRender = null;
-var createDefaultEngine = function() {
+var createDefaultEngine = function () {
   return new BABYLON.Engine(canvas, true, {
     preserveDrawingBuffer: true,
     stencil: true,
@@ -143,11 +142,11 @@ var createDefaultEngine = function() {
   });
 };
 
-window.initFunction = async function() {
+window.initFunction = async function () {
 
 
 
-  var asyncEngineCreation = async function() {
+  var asyncEngineCreation = async function () {
     try {
       return createDefaultEngine();
     } catch (e) {
@@ -166,6 +165,6 @@ initFunction().then(() => {
 });
 
 // Resize
-window.addEventListener("resize", function() {
+window.addEventListener("resize", function () {
   engine.resize();
 });
