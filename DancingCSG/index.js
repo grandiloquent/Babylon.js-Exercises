@@ -4,7 +4,7 @@ var createScene = function () {
   var camera = new BABYLON.ArcRotateCamera("Camera", 0.9, 1.96, 150, BABYLON.Vector3.Zero(), scene);
   camera.setTarget(new BABYLON.Vector3(0, -150, 0));
   camera.attachControl(canvas, true);
-
+  
   var pl1 = new BABYLON.PointLight("Omni0", new BABYLON.Vector3(240, 240, 0), scene);
   pl1.diffuse = new BABYLON.Color3(219 / 255, 138 / 255, 73 / 255);
   pl1.specular = new BABYLON.Color3(219 / 255, 138 / 255, 73 / 255);

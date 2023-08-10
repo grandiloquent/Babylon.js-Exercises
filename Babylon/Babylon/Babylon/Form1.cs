@@ -23,7 +23,7 @@ namespace Babylon
 
         private CallbackObjectForJs _callBackObjectForJs;
         string fileName;
-        private bool isLoadFile = false;
+        private bool isLoadFile = true;
 
         public Form1()
         {
