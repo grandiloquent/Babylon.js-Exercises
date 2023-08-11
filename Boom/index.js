@@ -1,5 +1,5 @@
-
-var createScene = function () {
+// https://www.babylonjs.com/demos/Boom
+var createScene = function() {
   //  Particle parameters
   var size = 10; // particle size
   var widthNb = 30; // width particle number
@@ -10,16 +10,12 @@ var createScene = function () {
   var radius = size * heightNb / 12; // explosion radius
   var speed = radius * 1.2; // particle max speed
 
-  // Ground parameters
-
-
-  // Scene and camera
   var scene = new BABYLON.Scene(engine);
   scene.clearColor = new BABYLON.Color3(.4, .6, .8);
 
   const camera = createCamera();
 
-  var light = createHemisphericLight();
+  createHemisphericLight();
 
   var dirLight = createDirectionalLight();
 
@@ -28,22 +24,14 @@ var createScene = function () {
   var tx = createDynamicTexture();
 
   var mat = createStandardMaterial(tx);
+
   var ground = createGround();
+  createDisc(ground);
+  var shadowGenerator = createShadowGenerator(dirLight);
+  
 
+  var sps = createSolidParticleSystem(scene,mat,shadowGenerator);
 
-  // SPS : the particles !
-  var model = BABYLON.MeshBuilder.CreateBox("m", {
-    size: size
-  }, scene);
-  var sps = new BABYLON.SolidParticleSystem("sps", scene, {
-    isPickable: true
-  });
-  var nb = widthNb * heightNb;
-  sps.addShape(model, nb);
-  model.dispose();
-  var s = sps.buildMesh();
-  s.material = mat;
-  s.freezeWorldMatrix();
 
   // SPS tmp internal vars to avoid memory re-allocations
   sps.vars.target = BABYLON.Vector3.Zero(); // the target point where to set the explosion center
@@ -59,38 +47,10 @@ var createScene = function () {
   sps.vars.loss = 0.0; // tmp float for energy loss
   sps.vars.justClicked = false; // flag to compute or not the initial velocities
 
-  var shadowGenerator = createShadowGenerator(dirLight);
-  shadowGenerator.getShadowMap().renderList.push(s);
 
-
-  // SPS initializer: just set the particle along a vertical wall
-  sps.initParticles = function (widthNb, heightNb, size) {
-    var p = 0;
-    for (var j = 0; j < heightNb; j++) {
-      for (var i = 0; i < widthNb; i++) {
-
-        // let's position the quads on a grid
-        sps.particles[p].position.x = i * size + sps.vars.shiftx;
-        sps.particles[p].position.y = j * size + sps.vars.shifty;
-        sps.particles[p].position.z = 0;
-
-        // let's set the texture per quad
-        sps.particles[p].uvs.x = i * size / sps.vars.totalWidth;
-        sps.particles[p].uvs.y = j * size / sps.vars.totalHeight;
-        sps.particles[p].uvs.z = (i + 1) * size / sps.vars.totalWidth;
-        sps.particles[p].uvs.w = (j + 1) * size / sps.vars.totalHeight;
-
-        // set a custom random value per particle
-        sps.particles[p].rand = 1 / (1 + Math.random()) / 10;
-
-        // increment the particle index
-        p++;
-      }
-    }
-  }
 
   // SPS behavior : this function is called by setParticles() for each particle
-  sps.updateParticle = function (p) {
+  sps.updateParticle = function(p) {
 
     // just after the click, set once the initial velocity
     if (sps.vars.justClicked) {
@@ -148,20 +108,19 @@ var createScene = function () {
   };
 
   // If we want the shadows to fit the bounding box, we need to update it once per frame
-  sps.afterUpdateParticles = function () {
+  sps.afterUpdateParticles = function() {
     this.refreshVisibleSize();
   };
 
 
-  // Init sps
-  sps.initParticles(widthNb, heightNb, size); // compute initial particle positions
+ initParticles(sps,widthNb, heightNb, size); // compute initial particle positions
   sps.setParticles(); // set them
   sps.computeParticleColor = false; // the colors won't change
   sps.computeParticleTexture = false; // nor the texture now
 
   // Boom trigger
   var boom = false;
-  scene.onPointerDown = function (evt, pickResult) {
+  scene.onPointerDown = function(evt, pickResult) {
     var faceId = pickResult.faceId;
     if (faceId == -1) {
       return;
@@ -179,7 +138,7 @@ var createScene = function () {
 
   // Animation
   // scene.debugLayer.show();
-  scene.registerBeforeRender(function () {
+  scene.registerBeforeRender(function() {
     sps.setParticles();
     pl.position = camera.position;
   });
@@ -189,8 +148,8 @@ var createScene = function () {
 }
 var canvas = document.getElementById("renderCanvas");
 
-var startRenderLoop = function (engine, canvas) {
-  engine.runRenderLoop(function () {
+var startRenderLoop = function(engine, canvas) {
+  engine.runRenderLoop(function() {
     if (sceneToRender && sceneToRender.activeCamera) {
       sceneToRender.render();
     }
@@ -200,7 +159,7 @@ var startRenderLoop = function (engine, canvas) {
 var engine = null;
 var scene = null;
 var sceneToRender = null;
-var createDefaultEngine = function () {
+var createDefaultEngine = function() {
   return new BABYLON.Engine(canvas, true, {
     preserveDrawingBuffer: true,
     stencil: true,
@@ -208,11 +167,11 @@ var createDefaultEngine = function () {
   });
 };
 
-window.initFunction = async function () {
+window.initFunction = async function() {
 
 
 
-  var asyncEngineCreation = async function () {
+  var asyncEngineCreation = async function() {
     try {
       return createDefaultEngine();
     } catch (e) {
@@ -231,6 +190,6 @@ initFunction().then(() => {
 });
 
 // Resize
-window.addEventListener("resize", function () {
+window.addEventListener("resize", function() {
   engine.resize();
 });
