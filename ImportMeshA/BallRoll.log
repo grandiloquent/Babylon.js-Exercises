@@ -1,0 +1,405 @@
+Exporter version: 3.3.1, Blender version: 3.6.0
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  C:\Users\Administrator\Desktop\
+			processing texture artist_workshop_4k
+	Python World class constructor completed
+	processing begun of skeleton:  Armature, id:  0
+		processing begun of bone:  Bone, index:  0
+	processing begun of mesh:  Pipe 2
+		processing begun of material:  Pipes
+		num positions      :  1216
+		num normals        :  1216
+		num tangents       :  0
+		num uvs            :  2432
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2112
+	processing begun of mesh:  Link 1
+		processing begun of material:  Links
+		num positions      :  137559
+		num normals        :  137559
+		num tangents       :  0
+		num uvs            :  275118
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  239616
+	processing begun of mesh:  Pipe 1
+		processing begun of material:  Pipes
+		registered as also a user of material:  Pipes
+		num positions      :  85332
+		num normals        :  85332
+		num tangents       :  0
+		num uvs            :  170664
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  149760
+	processing begun of mesh:  Torus.001
+		processing begun of material:  Links
+		registered as also a user of material:  Links
+		num positions      :  753741
+		num normals        :  753741
+		num tangents       :  0
+		num uvs            :  1507482
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  279552
+	processing begun of mesh:  Plane
+		processing begun of material:  Blackdrop
+		num positions      :  741
+		num normals        :  741
+		num tangents       :  0
+		num uvs            :  1482
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1344
+	processing begun of mesh:  Ball
+		animation processing begun
+			processing action BallAction.002:  in[121 - 321], out[0 - 321]
+		processing begun of material:  Ball Material
+		processing begun of material:  Marble
+			WARNING: unsupported node type(ShaderNodeRGBCurve) will trigger baking
+			WARNING: unsupported node type(ShaderNodeBump) will trigger baking
+			WARNING: Metal channel baking required, but not possible, ignored
+			WARNING: Roughness channel baking required, but not possible, ignored
+			WARNING: Refraction channel baking required, but not possible, ignored
+			Baking texture, type: DIFFUSE, mapped using: BakingUV
+			processing texture Ball_baked_DIFFUSE
+			Diffuse / albeto channel baked
+			Baking texture, type: EMIT, mapped using: BakingUV
+			processing texture Ball_baked_EMIT
+			emissive channel baked
+			Baking texture, type: GLOSSY, mapped using: BakingUV
+			processing texture Ball_baked_GLOSSY
+			specular channel baked
+			Baking texture, type: NORMAL, mapped using: BakingUV
+			processing texture Ball_baked_NORMAL
+			bump channel baked
+			bake time:  0 min, 23.1791 secs
+		num positions      :  16977
+		num normals        :  16977
+		num tangents       :  0
+		num uvs            :  33954
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  30720
+	processing begun of mesh:  Slabs
+		processing begun of material:  Slab
+		num positions      :  4882
+		num normals        :  4882
+		num tangents       :  0
+		num uvs            :  9764
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  9760
+	processing begun of mesh:  Slabs.001
+		processing begun of material:  Slab
+		registered as also a user of material:  Slab
+		num positions      :  4882
+		num normals        :  4882
+		num tangents       :  0
+		num uvs            :  9764
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  9760
+	processing begun of mesh:  Slabs.002
+		animation processing begun
+			processing action Slabs.002Action.001:  in[41 - 161], out[0 - 161]
+		processing begun of material:  Slab
+		registered as also a user of material:  Slab
+		num positions      :  4882
+		num normals        :  4882
+		num tangents       :  0
+		num uvs            :  9764
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  9760
+	processing begun of mesh:  Slabs.003
+		animation processing begun
+			processing action Slabs.002Action.002:  in[81 - 201], out[0 - 201]
+		processing begun of material:  Slab
+		registered as also a user of material:  Slab
+		num positions      :  4882
+		num normals        :  4882
+		num tangents       :  0
+		num uvs            :  9764
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  9760
+	processing begun of mesh:  Slabs.004
+		animation processing begun
+			processing action Slabs.002Action.003:  in[121 - 241], out[0 - 241]
+		processing begun of material:  Slab
+		registered as also a user of material:  Slab
+		num positions      :  4882
+		num normals        :  4882
+		num tangents       :  0
+		num uvs            :  9764
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  9760
+	processing begun of mesh:  Slabs.005
+		animation processing begun
+			processing action Slabs.002Action.004:  in[161 - 281], out[0 - 281]
+		processing begun of material:  Slab
+		registered as also a user of material:  Slab
+		num positions      :  4882
+		num normals        :  4882
+		num tangents       :  0
+		num uvs            :  9764
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  9760
+	processing begun of mesh:  Slabs.006
+		animation processing begun
+			processing action Slabs.002Action.005:  in[201 - 321], out[0 - 321]
+		processing begun of material:  Slab
+		registered as also a user of material:  Slab
+		num positions      :  4882
+		num normals        :  4882
+		num tangents       :  0
+		num uvs            :  9764
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  9760
+	processing begun of mesh:  Slabs.007
+		animation processing begun
+			processing action Slabs.002Action.006:  in[241 - 361], out[0 - 361]
+		processing begun of material:  Slab
+		registered as also a user of material:  Slab
+		num positions      :  4882
+		num normals        :  4882
+		num tangents       :  0
+		num uvs            :  9764
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  9760
+	processing begun of mesh:  Slabs.008
+		animation processing begun
+			processing action Slabs.002Action:  in[281 - 401], out[0 - 401]
+		processing begun of material:  Slab
+		registered as also a user of material:  Slab
+		num positions      :  4882
+		num normals        :  4882
+		num tangents       :  0
+		num uvs            :  9764
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  9760
+	processing begun of mesh:  Slabs.009
+		processing begun of material:  Slab
+		registered as also a user of material:  Slab
+		num positions      :  4882
+		num normals        :  4882
+		num tangents       :  0
+		num uvs            :  9764
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  9760
+	processing begun of mesh:  Slabs.010
+		processing begun of material:  Slab
+		registered as also a user of material:  Slab
+		num positions      :  4882
+		num normals        :  4882
+		num tangents       :  0
+		num uvs            :  9764
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  9760
+	processing begun of mesh:  Slabs.011
+		processing begun of material:  Slab
+		registered as also a user of material:  Slab
+		num positions      :  4882
+		num normals        :  4882
+		num tangents       :  0
+		num uvs            :  9764
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  9760
+	processing begun of mesh:  Slabs.012
+		processing begun of material:  Slab
+		registered as also a user of material:  Slab
+		num positions      :  4882
+		num normals        :  4882
+		num tangents       :  0
+		num uvs            :  9764
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  9760
+	processing begun of mesh:  Slabs.013
+		processing begun of material:  Slab
+		registered as also a user of material:  Slab
+		num positions      :  4882
+		num normals        :  4882
+		num tangents       :  0
+		num uvs            :  9764
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  9760
+	processing begun of mesh:  Slabs.014
+		processing begun of material:  Slab
+		registered as also a user of material:  Slab
+		num positions      :  4882
+		num normals        :  4882
+		num tangents       :  0
+		num uvs            :  9764
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  9760
+	processing begun of mesh:  Slabs.015
+		processing begun of material:  Slab
+		registered as also a user of material:  Slab
+		num positions      :  4882
+		num normals        :  4882
+		num tangents       :  0
+		num uvs            :  9764
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  9760
+	processing begun of mesh:  Slabs.016
+		processing begun of material:  Slab
+		registered as also a user of material:  Slab
+		num positions      :  4882
+		num normals        :  4882
+		num tangents       :  0
+		num uvs            :  9764
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  9760
+	processing begun of mesh:  Slabs.017
+		processing begun of material:  Slab
+		registered as also a user of material:  Slab
+		num positions      :  4882
+		num normals        :  4882
+		num tangents       :  0
+		num uvs            :  9764
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  9760
+	processing begun of mesh:  Slabs.018
+		processing begun of material:  Slab
+		registered as also a user of material:  Slab
+		num positions      :  4882
+		num normals        :  4882
+		num tangents       :  0
+		num uvs            :  9764
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  9760
+	processing begun of mesh:  Slabs.019
+		processing begun of material:  Slab
+		registered as also a user of material:  Slab
+		num positions      :  4882
+		num normals        :  4882
+		num tangents       :  0
+		num uvs            :  9764
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  9760
+	processing begun of mesh:  Slabs.020
+		processing begun of material:  Slab
+		registered as also a user of material:  Slab
+		num positions      :  4882
+		num normals        :  4882
+		num tangents       :  0
+		num uvs            :  9764
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  9760
+	processing begun of mesh:  Slabs.021
+		processing begun of material:  Slab
+		registered as also a user of material:  Slab
+		num positions      :  4882
+		num normals        :  4882
+		num tangents       :  0
+		num uvs            :  9764
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  9760
+	processing begun of mesh:  Slabs.022
+		processing begun of material:  Slab
+		registered as also a user of material:  Slab
+		num positions      :  4882
+		num normals        :  4882
+		num tangents       :  0
+		num uvs            :  9764
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  9760
+	processing begun of mesh:  Slabs.023
+		processing begun of material:  Slab
+		registered as also a user of material:  Slab
+		num positions      :  4882
+		num normals        :  4882
+		num tangents       :  0
+		num uvs            :  9764
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  9760
+	processing begun of mesh:  Slabs.024
+		processing begun of material:  Slab
+		registered as also a user of material:  Slab
+		num positions      :  4882
+		num normals        :  4882
+		num tangents       :  0
+		num uvs            :  9764
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  9760
+	processing begun of mesh:  Slabs.025
+		processing begun of material:  Slab
+		registered as also a user of material:  Slab
+		num positions      :  4882
+		num normals        :  4882
+		num tangents       :  0
+		num uvs            :  9764
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  9760
+	processing begun of camera (UniversalCamera):  Camera
+	processing begun of light (HEMI FROM AREA):  Area
+	processing begun of light (HEMI FROM AREA):  Area.001
+========= Writing of JSON file started =========
+	writing mesh:  Pipe 2
+	writing mesh:  Link 1
+	writing mesh:  Pipe 1
+	writing mesh:  Torus.001
+	writing mesh:  Plane
+	writing mesh:  Ball
+	writing mesh:  Slabs
+	writing mesh:  Slabs.001
+	writing mesh:  Slabs.002
+	writing mesh:  Slabs.003
+	writing mesh:  Slabs.004
+	writing mesh:  Slabs.005
+	writing mesh:  Slabs.006
+	writing mesh:  Slabs.007
+	writing mesh:  Slabs.008
+	writing mesh:  Slabs.009
+	writing mesh:  Slabs.010
+	writing mesh:  Slabs.011
+	writing mesh:  Slabs.012
+	writing mesh:  Slabs.013
+	writing mesh:  Slabs.014
+	writing mesh:  Slabs.015
+	writing mesh:  Slabs.016
+	writing mesh:  Slabs.017
+	writing mesh:  Slabs.018
+	writing mesh:  Slabs.019
+	writing mesh:  Slabs.020
+	writing mesh:  Slabs.021
+	writing mesh:  Slabs.022
+	writing mesh:  Slabs.023
+	writing mesh:  Slabs.024
+	writing mesh:  Slabs.025
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  1 min, 23.1151 secs
